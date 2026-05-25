@@ -623,7 +623,11 @@ input.fv:focus {
   body { background: #fff; font-size: 10pt; }
   .paper-page { padding: 0; box-shadow: none; max-width: 100%; }
 
-  #print-doc { display: block !important; }
+  #print-doc {
+    display: block !important;
+    padding: 14mm 16mm;
+    box-sizing: border-box;
+  }
 
   /* ── Print: Cover header ── */
   .pd-cover {
