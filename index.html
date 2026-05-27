@@ -944,7 +944,7 @@ input.fv:focus {
       <div class="spheres-form" id="spheres-form"></div>
 
       <div class="hint-block">
-        Уровень определяется автоматически: до 50% — Дитя, 50–74% — Подросток, 75% и выше — Взрослый
+        Уровень определяется автоматически: 0–40% — Дитя, 41–75% — Подросток, 76% и выше — Взрослый
       </div>
 
       <button class="submit-btn" onclick="buildMap()">Построить карту</button>
@@ -984,9 +984,9 @@ input.fv:focus {
     </div>
 
     <div class="legend">
-      <div class="leg"><div class="leg-dot" style="background:var(--c-purple-accent)"></div>Дитя — до 50%</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-amber-line)"></div>Подросток — 50–74%</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-teal)"></div>Взрослый — 75% и выше</div>
+      <div class="leg"><div class="leg-dot" style="background:var(--c-purple-accent)"></div>Дитя — 0–40%</div>
+      <div class="leg"><div class="leg-dot" style="background:var(--c-amber-line)"></div>Подросток — 41–75%</div>
+      <div class="leg"><div class="leg-dot" style="background:var(--c-teal)"></div>Взрослый — 76% и выше</div>
     </div>
 
     <div class="radar-wrap">
@@ -1015,7 +1015,7 @@ input.fv:focus {
 <script>
 var SPHERES_DEF = [
   {key:'uniqueness', name:'Уникальность',       what:'Понимание своих талантов и особых качеств. Способность видеть и использовать то, что делает вас неповторимым.'},
-  {key:'display',    name:'Самореализация',       what:'Реализация своего потенциала, движение к целям, готовность заявить о себе и своих результатах миру.'},
+  {key:'display',    name:'Проявленность',         what:'Готовность заявить о себе миру, выйти из тени, показать свои результаты и экспертизу.'},
   {key:'openness',   name:'Открытость',         what:'Готовность открываться новому опыту, людям, идеям. Доверие к миру и способность принимать помощь.'},
   {key:'family',     name:'Семья',              what:'Качество отношений с близкими, умение выстраивать границы и поддерживать семейный баланс.'},
   {key:'social',     name:'Социальный капитал', what:'Качество и глубина социальных связей, нетворкинг, умение создавать и использовать поддерживающее окружение.'},
@@ -1037,8 +1037,8 @@ var levelNames  = {child:'Дитя', teen:'Подросток', adult:'Взро�
 var levelBadge  = {child:'badge-child', teen:'badge-teen', adult:'badge-adult'};
 
 function getLevel(pct){
-  if(pct < 50) return 'child';
-  if(pct < 75) return 'teen';
+  if(pct <= 40) return 'child';
+  if(pct <= 75) return 'teen';
   return 'adult';
 }
 
@@ -1417,9 +1417,9 @@ function buildPrintDoc(){
     +   radarSrc
     +   '<div class="pd-legend">'
     +     '<div class="pd-legend-title">Легенда</div>'
-    +     '<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#9b6bc9"></div>Дитя — до 50%</div>'
-    +     '<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#ef9f27"></div>Подросток — 50–74%</div>'
-    +     '<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#2E9E6E"></div>Взрослый — 75% и выше</div>'
+    +     '<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#9b6bc9"></div>Дитя — 0–40%</div>'
+    +     '<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#ef9f27"></div>Подросток — 41–75%</div>'
+    +     '<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#2E9E6E"></div>Взрослый — 76% и выше</div>'
     +   '</div>'
     + '</div>'
 
