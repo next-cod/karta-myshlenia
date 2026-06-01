@@ -467,7 +467,7 @@ input.fv:focus { border-color: var(--c-purple); background: #fff; box-shadow: 0 
       <div class="spheres-form" id="spheres-form"></div>
 
       <div class="hint-block">
-        Уровень определяется автоматически: 0–40% — Дитя, 41–75% — Подросток, 76% и выше — Взрослый
+        Уровень определяется автоматически: 0–30% — Дитя, 30–70% — Подросток, 70% и выше — Взрослый
       </div>
 
       <button class="submit-btn" onclick="buildMap()">Построить карту</button>
@@ -508,9 +508,9 @@ input.fv:focus { border-color: var(--c-purple); background: #fff; box-shadow: 0 
     </div>
 
     <div class="legend">
-      <div class="leg"><div class="leg-dot" style="background:var(--c-purple-accent)"></div>Дитя — 0–40%</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-amber-line)"></div>Подросток — 41–75%</div>
-      <div class="leg"><div class="leg-dot" style="background:var(--c-teal)"></div>Взрослый — 76% и выше</div>
+      <div class="leg"><div class="leg-dot" style="background:var(--c-purple-accent)"></div>Дитя — 0–30%</div>
+      <div class="leg"><div class="leg-dot" style="background:var(--c-amber-line)"></div>Подросток — 30–70%</div>
+      <div class="leg"><div class="leg-dot" style="background:var(--c-teal)"></div>Взрослый — 70% и выше</div>
     </div>
 
     <div class="radar-wrap">
@@ -576,8 +576,8 @@ var levelNames  = {child:'Дитя', teen:'Подросток', adult:'Взро�
 var levelBadge  = {child:'badge-child', teen:'badge-teen', adult:'badge-adult'};
 
 function getLevel(pct){
-  if(pct <= 40) return 'child';
-  if(pct <= 75) return 'teen';
+  if(pct < 30) return 'child';
+  if(pct < 70) return 'teen';
   return 'adult';
 }
 
@@ -996,9 +996,9 @@ function buildPrintDoc(){
     +'</div>'
     +'<div class="pd-radar-section">'+radarSrc
     +'<div class="pd-legend"><div class="pd-legend-title">Легенда</div>'
-    +'<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#9b6bc9"></div>Дитя — 0–40%</div>'
-    +'<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#ef9f27"></div>Подросток — 41–75%</div>'
-    +'<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#2E9E6E"></div>Взрослый — 76% и выше</div>'
+    +'<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#9b6bc9"></div>Дитя — 0–30%</div>'
+    +'<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#ef9f27"></div>Подросток — 30–70%</div>'
+    +'<div class="pd-leg-row"><div class="pd-leg-dot" style="background:#2E9E6E"></div>Взрослый — 70% и выше</div>'
     +'</div></div>'
     +'<div class="pd-section-title">Результаты по сферам</div>'
     +'<div class="pd-spheres">'+sphereCards+'</div>'
