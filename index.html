@@ -382,7 +382,7 @@ input.fv:focus { border-color: var(--c-purple); background: #fff; box-shadow: 0 
   .cover-logo { height: 95px; }
   .guide-card { grid-template-columns: 1fr; gap: 16px; text-align: center; }
   .guide-button { width: 100%; }
-  .history-entry { flex-wrap: wrap; }
+  .history-entry { flex-wrap: wrap; gap: 12px; }
   .he-actions { width: 100%; }
   .he-view-btn, .he-del-btn { flex: 1; justify-content: center; }
 }
@@ -399,19 +399,27 @@ input.fv:focus { border-color: var(--c-purple); background: #fff; box-shadow: 0 
   .tc { padding: 12px 8px; }
   .tv { font-size: 24px; }
   .tl { font-size: 11px; }
-  .legend { gap: 10px; }
-  .leg { font-size: 13px; }
+  .legend { gap: 10px; flex-direction: column; align-items: center; }
+  .leg { font-size: 14px; }
   .radar-wrap svg { width: 100% !important; height: auto !important; }
-  .action-row { flex-direction: column; }
+  .action-row { flex-direction: column; gap: 10px; }
   .back-btn, .print-btn, .hist-btn { width: 100%; justify-content: center; }
+  .print-btn-large { width: 100%; justify-content: center; font-size: 18px; }
+  .print-btn-center { margin-top: 8px; }
   .guide-card { padding: 20px; }
   .guide-card h2 { font-size: 21px; }
   .hint-block { font-size: 15px; }
   .sd-text { font-size: 16px; }
+  .sd-body { padding: 14px 16px; }
   .focus-row { font-size: 16px; }
+  .focus-card { padding: 18px 16px; }
   .result-name { font-size: 26px; }
   .score-field { padding: 14px 16px; }
   .he-badges { display: none; }
+  .he-info { min-width: 0; }
+  .he-name { font-size: 17px; }
+  .sphere-row-name { font-size: 16px; }
+  .radar-hint { font-size: 15px; padding: 10px 14px; }
 }
 
 /* ── RESPONSIVE ≤ 380px ── */
@@ -419,8 +427,10 @@ input.fv:focus { border-color: var(--c-purple); background: #fff; box-shadow: 0 
   .paper-page { padding: 16px 12px 48px; }
   .cover-title { font-size: 24px; }
   .cover-logo { height: 68px; }
-  .score-input { width: 64px; font-size: 20px; }
+  .score-input { width: 60px; font-size: 20px; }
   .totals { grid-template-columns: 1fr; gap: 8px; }
+  .result-name { font-size: 22px; }
+  .tv { font-size: 22px; }
 }
 </style>
 </head>
